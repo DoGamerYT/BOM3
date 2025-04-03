@@ -10,6 +10,11 @@ ik heb een animatie van een lopend popetje.
 [Script animations](ArcadeM3/Assets/Scripts/Animation.cs)
 
 
+## Tutorial 2
+In deze tutorial heb ik een cube laten bewegen.
+
+![script movement](ArcadeM3/Assets/Scripts/Movement.cs)
+
 
 
 
