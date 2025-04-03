@@ -13,8 +13,13 @@ ik heb een animatie van een lopend popetje.
 ## Tutorial 2
 In deze tutorial heb ik een cube laten bewegen.
 
+
 ![script movement](ArcadeM3/Assets/Scripts/Movement.cs)
 
+## Tutorial 3
+In deze tutorial kun je zien hoe ik een cube laat springen en parkouren.
 
+![Tutorial 3 gif](tutorial_3)
+![script movement](ArcadeM3/Assets/Scripts/Movement.cs)
 
 
