@@ -1,11 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class Movement : MonoBehaviour
 {
     public float moveSpeed = 5f;      
-    public float jumpForce = 7f;      
+    public float jumpForce = 7f;
     public LayerMask groundLayer;     
 
     private Rigidbody rb;
@@ -13,13 +14,16 @@ public class Movement : MonoBehaviour
 
     void Start()
     {
-        rb = GetComponent<Rigidbody>(); 
+        rb = GetComponent<Rigidbody>();
     }
 
     void Update()
     {
         MovePlayer();
         CheckGrounded();
+        
+
+
 
         if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
         {
@@ -34,6 +38,7 @@ public class Movement : MonoBehaviour
 
         Vector3 moveDirection = new Vector3(moveX, 0f, moveZ) * moveSpeed;
         Vector3 newVelocity = new Vector3(moveDirection.x, rb.velocity.y, moveDirection.z);
+        
 
         rb.velocity = newVelocity;
     }
@@ -46,5 +51,18 @@ public class Movement : MonoBehaviour
     void CheckGrounded()
     {
         isGrounded = Physics.Raycast(transform.position, Vector3.down, 1.1f, groundLayer);
+    }
+
+    void TurnPlayer()
+    {
+        transform.position = new Vector3(-1.8f, 1.2f, 0.15f);
+        transform.Rotate(0.0f, 10.0f, 0.0f);
+        transform.Rotate(moveSpeed, 10.0f, 50.0f);
+
+    }
+
+    void PlayerCam()
+    {
+       
     }
 }
