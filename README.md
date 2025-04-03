@@ -1,8 +1,6 @@
 # BOM3
 
 
-<<<<<<< HEAD
-
 ## Tutorial 1
 ik heb een animatie van een lopend popetje. 
 
