@@ -5,36 +5,32 @@ using UnityEngine;
 
 public class Animation : MonoBehaviour
 {
-    Animator m_Animator;
-    // Start is called before the first frame update
+    private Animator ani;
+
     void Start()
     {
-        m_Animator = gameObject.GetComponent<Animator>();
+        ani = GetComponent<Animator>();
     }
-
-    
-
-    // Update is called once per frame
     void Update()
     {
-        if (Input.GetKey(KeyCode.W))
+        if (Input.GetAxis("Vertical") > 0)
         {
-            m_Animator.SetTrigger("start walking");
-
-            //m_Animator.ResetTrigger("start walking");
-
-            m_Animator.ResetTrigger("stop walking");
-
+            ani.SetTrigger("start walking");
+            ani.ResetTrigger("stop walking");
+            ani.ResetTrigger("Walk Backwards");
         }
-        else if (Input.GetKey(KeyCode.S)) 
+        else if (Input.GetAxis("Vertical") < 0)
         {
-            m_Animator.SetTrigger("stop walking");
-
-            //m_Animator.ResetTrigger("stop walking");
-
-            m_Animator.ResetTrigger("start walking");
+            ani.SetTrigger("stop walking");
+            ani.ResetTrigger("Walk Backwards");
+            ani.ResetTrigger("start walking");
         }
-      
+        else
+        {
+            ani.SetTrigger("stop walking");
+            ani.ResetTrigger("start walking");
+            ani.ResetTrigger("stop walking");
+        }
     }
 
 }

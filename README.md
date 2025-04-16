@@ -12,7 +12,8 @@ ik heb een animatie van een lopend popetje.
 
 ## Tutorial 2
 In deze tutorial heb ik een cube laten bewegen.
-
+![Tutorial 2 Gif](Tutorial2.gif)
+[Script Basicmove](ArcadeM3/Assets/Scripts/BasicMove.cs)
 
 
 
